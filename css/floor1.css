@@ -6,7 +6,48 @@
     transform: translateY(-1vh);
 }
 
-main {
+aside{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    min-width: 20vh;
+    height: 100vh;
+    border-right: 0.8vh #534439 solid;
+    background-color: #FFECCC;
+}
+
+aside > b{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.5vh;
+    height: 8vh;
+    width: 100%;
+    border-bottom: 0.5vh rgb(83, 58, 38) solid;
+}
+
+aside > div{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2vh;
+    box-sizing: border-box;
+    width: 100%;
+    height: 7vh;
+    font-size: 1.8vh;
+    border-bottom: 0.5vh rgb(83, 58, 38) solid;
+}
+
+aside > div > span{
+    color: red;
+}
+
+main{
+    position: relative;
+    flex-grow: 1;
+}
+
+section {
     display: grid;
     grid-template-areas:
         's s b b c c'
@@ -18,47 +59,52 @@ main {
     border: 0.8vh #534439 solid;
 }
 
-main > div{
+section > div{
     position: relative;
     background-size: 100% 100%;
     box-sizing: border-box;
     filter: brightness(0.5);
+    transition: filter 0.4s;
 }
 
-.on{
+div.on{
     filter: brightness(1);
 }
 
-#cucina {
+span.on{
+    color: green;
+}
+
+#Cucina {
     grid-area: c;
     background-image: url(../img/cucina.jpeg);
 }
 
-#sala {
+#Sala {
     grid-area: s;
     border-right: 0.8vh #534439 solid;
     background-image: url(../img/salotto.avif);
 }
 
-#corridoio {
+#Corridoio {
     grid-area: o;
     border-top: 0.8vh #534439 solid;
     background-image: url(../img/parquet.jpg);
 }
 
-#scale {
+#Scale {
     grid-area: scale;
     border-top: 0.8vh #534439 solid;
     background-color: green;
 }
 
-#bagno {
+#Bagno {
     grid-area: b;
     border-right: 0.8vh #534439 solid;
     background-image: url(../img/bagno.jpg);
 }
 
-.slider{
+label{
     position: absolute;
     bottom: 1vh;
     right: 1vh;
@@ -69,7 +115,7 @@ main > div{
     overflow: hidden;
 }
 
-.slider > span {
+label > span {
     position: absolute;
     cursor: pointer;
     top: 0;
@@ -80,11 +126,11 @@ main > div{
     transition: 0.4s;
 }
 
-.slider > input{
+label > input{
     display: none;
 }
 
-.slider > span:before {
+label > span:before {
     position: absolute;
     content: "";
     height: 26px;
@@ -96,59 +142,110 @@ main > div{
     transition: 0.4s;
 }
 
-.slider > input:checked + span {
+label > input:checked + span {
     background-color: #2196F3 !important;
 }
 
-.slider > input:checked + span::before {
+label > input:checked + span::before {
     transform: translateX(26px);
 }
 
-@media screen and (max-width: 1400px) {
-    main{
+@media screen and (max-width: 1600px) {
+    section{
         width: 910px;
         height: 490px;
     }
 }
 
-@media screen and (max-width: 960px) {
-    main{
+@media screen and (max-width: 1130px) {
+    section{
         width: 700px;
         height: 380px;
     }
 }
 
-@media screen and (max-width: 760px) {
-    main{
+@media screen and (max-width: 900px) {
+    section{
         width: 590px;
         height: 318px;
+    }
+
+    label{
+        transform: scale(80%);
+        bottom: 0;
+        right: 0;
+    }
+}
+
+@media screen and (max-width: 790px) {
+    body{
+        flex-direction: column;
+    }
+
+    aside{
+        flex-direction: row;
+        max-height: 8vh;
+        width: 100%;
+        border-right: none;
+        border-bottom: 0.5vh rgb(83, 58, 38) solid;
+    }
+
+    aside > b{
+        display: none;
+    }
+
+    aside > div{
+        flex-direction: column;
+        justify-content: space-evenly;
+        height: 100%;
+        padding: 0.4vh;
+        border-right: 0.5vh rgb(83, 58, 38) solid;
+        border-bottom: none;
+    }
+
+    aside > div:last-child{
+        border: none;
     }
 }
 
 @media screen and (max-width: 620px) {
-    main{
+    section{
+        width: 470px;
+        height: 254px;
+    }
+
+    label{
+        transform: scale(60%);
+    }
+}
+
+@media screen and (max-width: 500px) {
+    section{
         width: 410px;
         height: 220px;
     }
 
     label{
-        transform: scale(80%);
+        transform: scale(50%);
+        bottom: -0.8vh;
+        right: -1.6vh;
     }
 }
 
-@media screen and (max-width: 430px) {
-    main{
+@media screen and (max-width: 435px) {
+    section{
         width: 330px;
         height: 176px;
     }
-
-    label{
-        transform: scale(70%);
-    }
+   
 }
 
 @media screen and (max-width: 350px) {
-    main{
+    section{
         transform: scale(80%);
     }
+
+    aside > div{
+        font-size: 1.3vh;
+    }    
 }

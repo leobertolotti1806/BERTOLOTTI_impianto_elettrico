@@ -13,11 +13,8 @@ owner.addEventListener("input", () => {
     else owner.classList.remove("exist");
 });
 
-function check(e) {
-    if (owner.value != "")
-        open(`./${e.target.id}.html?n=${owner.value}`, "_self");
-    else alert("Inserisci un proprietario");
-}
 
-document.getElementById("floor1").onclick = check;
-document.getElementById("floor2").onclick = check;
+for (const btn of document.querySelectorAll("#menu > button"))
+    btn.addEventListener("click", () => {
+        open(`./${btn.id}.html?n=${owner.value}`, "_self");
+    });
