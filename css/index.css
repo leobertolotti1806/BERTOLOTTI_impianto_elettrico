@@ -1,13 +1,3 @@
-body{
-    margin: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-    font-family: "regular" !important;
-    overflow: hidden;
-}
-
 body > img:first-child{
     width: 100%;
     height: 100%;
@@ -33,8 +23,16 @@ body > img:first-child{
     color: #FFE6D8;
     text-align: center;
     font-size: 2.4vh;
+    border-radius: 3vh;
+    box-sizing: border-box;
+    border: 0.6vh rgb(83, 58, 38) solid;
+    background-color: #b04e34;
     outline: none;
     animation: pulse 1s alternate infinite ease-in-out;
+}
+
+.exist{
+    transform: scale(100%) !important;
 }
 
 @keyframes pulse {
@@ -52,17 +50,6 @@ input.pl:focus-visible , input.pl:focus{
     border-color: #ef8e38;
     animation-play-state: paused !important;
     text-shadow: none !important;
-}
-
-.pl{
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-    padding: 0.6vh;
-    box-sizing: border-box;
-    border-radius: 3vh;
-    border: 0.6vh rgb(83, 58, 38) solid;
-    background-color: #b04e34;
 }
 
 #menu > button:hover{

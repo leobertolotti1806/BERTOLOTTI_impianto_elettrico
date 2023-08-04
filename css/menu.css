@@ -13,6 +13,17 @@ span.material-symbols-rounded{
     font-size: 2.7vh;
 }
 
+body{
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    font-family: "regular" !important;
+    background-image: linear-gradient(to right, #108dc7, #ef8e38);
+    overflow: hidden;
+}
+
 #menu{
     position: absolute;
     z-index: 10;
@@ -40,7 +51,8 @@ span.material-symbols-rounded{
     font-size: 2vh;
     font-family: "regular";
     color: #FFE6D8;
-    box-shadow: 6px 6px 10px black;
+    box-shadow: 0.8vh 0.8vh 1vh black;
+    border: 0.5vh rgb(83, 58, 38) solid;
     background-color: #b04e34;
     cursor: pointer;
     transition: border-color 0.3s, transform 0.3s;
@@ -52,6 +64,8 @@ span.material-symbols-rounded{
 
 @media screen and (max-width: 378px) {
     #menu{
+        top: 0.5vh;
+        right: -1vh;
         transform: scale(80%);
     }
 }
