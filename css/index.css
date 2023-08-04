@@ -1,13 +1,3 @@
-@font-face {
-    font-family: "regular";
-    src: url(../RedHatDisplay-Medium.otf);
-}
-
-::selection{
-    background-color: #ef8e38;
-    color: black;
-}
-
 body{
     margin: 0;
     display: flex;

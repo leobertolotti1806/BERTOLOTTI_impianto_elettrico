@@ -1,0 +1,2 @@
+#menu > button:first-child:hover { transform: translateY(1vh); }
+#menu > button:last-child:hover { transform: translateY(-1vh); }

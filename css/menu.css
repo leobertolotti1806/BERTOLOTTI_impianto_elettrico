@@ -1,3 +1,18 @@
+@font-face {
+    font-family: "regular";
+    src: url(../RedHatDisplay-Medium.otf);
+}
+
+::selection{
+    background-color: #ef8e38;
+    color: black;
+}
+
+span.material-symbols-rounded{
+    font-weight: 1000;
+    font-size: 2.7vh;
+}
+
 #menu{
     position: absolute;
     z-index: 10;
@@ -12,11 +27,6 @@
     border-radius: 3vh;
     box-shadow: 1vh 1vh 1vh black;
     background-image: linear-gradient(to right, #ef8e38,#e16470, #a25c90, #565883);
-}
-
-span.material-symbols-rounded{
-    font-weight: 1000;
-    font-size: 2.7vh;
 }
 
 #menu > button {

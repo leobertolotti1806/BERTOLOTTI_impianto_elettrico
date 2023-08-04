@@ -2,7 +2,7 @@ let owner = document.querySelector("input");
 
 function check(e) {
     if (owner.value != "")
-        open(`./floor${e.target.id.slice(-1)}.html?n=${owner.value}`);
+        open(`./${e.target.id}.html?n=${owner.value}`, "_self");
     else alert("Inserisci un proprietario");
 }
 
