@@ -29,23 +29,21 @@ main{
     background-image: linear-gradient(to right, #108dc7, #ef8e38);
 }
 
-.container{
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-    border: 0.7vh rgb(83, 58, 38) solid;
-    border-radius: 3vh;
-    box-shadow: 1vh 1vh 1vh black;
-    background-image: linear-gradient(to right, #ef8e38,#e16470, #a25c90, #565883);
-}
 
 #menu{
     position: absolute;
     z-index: 10;
     top: 3vh;
     right: 3vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
     width: 35vh;
     height: 10vh;
+    border: 0.7vh rgb(83, 58, 38) solid;
+    border-radius: 3vh;
+    box-shadow: 1vh 1vh 1vh black;
+    background-image: linear-gradient(to right, #ef8e38,#e16470, #a25c90, #565883);
 }
 
 #menu > button {

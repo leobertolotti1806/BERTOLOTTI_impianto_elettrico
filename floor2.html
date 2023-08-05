@@ -5,31 +5,84 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link rel="stylesheet" href="./css/base.css">
-    <link rel="stylesheet" href="./css/floor2.css">
+    <link rel="stylesheet" href="./css/floor.css">
 
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,0,0" />
 
     <script src="./js/floor.js" defer></script>
 
+    <style>
+        #menu > button:hover { transform: translateY(1vh) !important;}
+    </style>
+
     <link rel="icon" href="./img/icon.png">
 
     <title>Piano 2</title>
 </head>
 <body>
-    <div class="container" id="menu">
-        <button id="index">
-            FUORI
-            <span class="material-symbols-rounded">
-                south
-            </span>
-        </button>
-        <button id="floor1">
-            1 PIANO
-            <span class="material-symbols-rounded">
-                south
-            </span>
-        </button>
-    </div>
+    <aside>
+        <div></div>
+        <b>Piano 2</b>
+    </aside>
+
+    <main>
+        <section>
+            <div id="Camera-1">
+                <b>Camera da Letto</b>
+                <label>
+                    <input type="checkbox">
+                    <span></span>
+                </label>
+            </div>
+
+            <div id="Camera-2">
+                <b>Camera da Letto</b>
+                <label>
+                    <input type="checkbox">
+                    <span></span>
+                </label>
+            </div>
+
+            <div id="Terrazzo" class="on">
+                <b>Terrazzo</b>
+                <label>
+                    <input type="checkbox" checked>
+                    <span></span>
+                </label>
+            </div>
+
+            <div id="Bagno-2">
+                <b>Bagno</b>
+                <label>
+                    <input type="checkbox">
+                    <span></span>
+                </label>
+            </div>
+
+            <div class="on" id="Scale">
+                <b>Scale</b>
+                <label>
+                    <input type="checkbox" checked>
+                    <span></span>
+                </label>
+            </div>
+        </section>
+
+        <div id="menu">
+            <button id="floor1">
+                1 PIANO
+                <span class="material-symbols-rounded">
+                    south
+                </span>
+            </button>
+            <button id="index">
+                FUORI
+                <span class="material-symbols-rounded">
+                    south
+                </span>
+            </button>
+        </div>
+    </main>
 </body>
 </html>

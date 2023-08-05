@@ -7,12 +7,13 @@ if (n !== null) {
     owner.value = n;
 }
 
-owner.addEventListener("input", () => {
-    if (owner.value != "")
-        owner.classList.add("exist");
-    else owner.classList.remove("exist");
+owner.addEventListener("focusin", () => {
+    owner.classList.add("exist");
 });
 
+owner.addEventListener("focusout", () => {
+    owner.classList.remove("exist");
+});
 
 for (const btn of document.querySelectorAll("#menu > button"))
     btn.addEventListener("click", () => {
