@@ -17,5 +17,6 @@ owner.addEventListener("focusout", () => {
 
 for (const btn of document.querySelectorAll("#menu > button"))
     btn.addEventListener("click", () => {
-        open(`./${btn.id}.html?n=${owner.value}`, "_self");
+        if (owner.value != "")
+            open(`./${btn.id}.html?n=${owner.value}`, "_self");
     });
